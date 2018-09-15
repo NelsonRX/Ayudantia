@@ -2,7 +2,7 @@ package infinitygame;
 
 import java.util.Scanner;
 
-public class Infinitygame {
+public class InfinityGame {
 
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
@@ -191,7 +191,7 @@ public class Infinitygame {
         return jugadores;
     }
 
-    public static String[][] masVida(String jugadores[][], int turno) {
+    public static String[][] aumentaVida(String jugadores[][], int turno, int x) {
         int azar = (int) (Math.random() * 3) + 1;
         jugadores[turno][1] = String.valueOf(Integer.parseInt(jugadores[turno][1]) + azar);
         if ((Integer.parseInt(jugadores[turno][1]) + azar) > 15) {
@@ -200,7 +200,7 @@ public class Infinitygame {
         return jugadores;
     }
 
-    public static String[][] menosVida(String jugadores[][], int turno) {
+    public static String[][] disminuyeVida(String jugadores[][], int turno, int x) {
         int azar = (int) (Math.random() * 3) + 1;
         jugadores[turno][1] = String.valueOf(Integer.parseInt(jugadores[turno][1]) - azar);
         if ((Integer.parseInt(jugadores[turno][1]) - azar) < 1) {
