@@ -14,7 +14,7 @@ public class InfinityGame {
         do {
             System.out.println("Ingrese el largo del tablero");
             largo = leer.nextInt();
-        } while (largo < 10);
+        } while (largo < 20);
         char tablero[] = rellenarTablero(largo);
         System.out.println("\n");
 
